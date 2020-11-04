@@ -42,6 +42,12 @@
         <description></description>
     </key>
 
+    <key name="check-cmd" type="s">
+      <default>"/usr/bin/dnf check-update --refresh"</default>
+      <summary>Command to run to check packages.</summary>
+      <description>Command to run to check packages.</description>
+    </key>
+
     <key name="update-cmd" type="s">
       <default>"/usr/bin/dnf update -y"</default>
       <summary>Command to run to update packages.</summary>
