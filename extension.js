@@ -166,12 +166,16 @@ const FedoraUpdateIndicator = new Lang.Class({
         	else
             		UPDATE_CMD = PREPEND_CMD + STOCK_UPDATE_CMD;
 
+        	if (this._settings.get_string('check-cmd') !== "")
+            		CHECK_CMD = this._settings.get_string('check-cmd');
+        	else
+            		CHECK_CMD = STOCK_CHECK_CMD;
+
 		if(!ALLOW_NO_PASS) {
             		LIST_CMD = PREPEND_CMD + STOCK_LIST_CMD;
-			CHECK_CMD = PREPEND_CMD + STOCK_CHECK_CMD;
+			CHECK_CMD = PREPEND_CMD + CHECK_CMD;
 		} else {
         		LIST_CMD = STOCK_LIST_CMD;
-			CHECK_CMD = STOCK_CHECK_CMD;
 		}
 		
 		this._checkShowHide();
